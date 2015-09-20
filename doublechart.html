@@ -1,0 +1,76 @@
+<html>
+  <head>
+    <script src="doublechart.js"></script>
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type="text/javascript">
+      function onLoad() {
+        var config = {};
+        config[DoubleChart.ConfigKeys.ROW_PANE_ID] = 'row-pane';
+        config[DoubleChart.ConfigKeys.COL_PANE_ID] = 'col-pane';
+        config[DoubleChart.ConfigKeys.TABLE_ID] = 'the-table';
+        config[DoubleChart.ConfigKeys.AUTO_LOAD] = true;
+        new DoubleChart(config).load();
+      }
+    </script>
+    <style>
+      .doublechart-row-selected {
+         background-color:hsla(0,0%,50%,0.8);
+      }
+      .doublechart-col-selected {
+         background-color:hsla(0,0%,50%,0.4);
+      }
+    </style>
+  </head>
+  <body onload="onLoad()">
+    
+    <table border=0>
+      <tr>
+	<td rowspan=2 style="vertical-align:top">
+	  <table border=1 id="the-table">
+	    <tr>
+	      <th>Cols</th>
+	      <th>1</th>
+	      <th>2</th>
+	      <th>3</th>
+	    </tr>
+	    <tr>
+	      <td>1</td>
+	      <td>1</td>
+	      <td>10</td>
+	      <td>20</td>
+	    </tr>
+	    <tr>
+	      <td>2</td>
+	      <td>5</td>
+	      <td>10</td>
+	      <td>15</td>
+	    </tr>
+	    <tr>
+	      <td>3</td>
+	      <td>1</td>
+	      <td>2</td>
+	      <td>3</td>
+	    </tr>
+	    <tr>
+	      <td>4</td>
+	      <td>20</td>
+	      <td>50</td>
+	      <td>50</td>
+	    </tr>
+	  </table>
+	  </td>
+	<td>
+	  <b>Graph of rows</b>
+	  <div style="display:hidden" id="row-pane"></div>
+	</td>
+      </tr>
+      <tr>
+	<td>
+	  <b>Graph of columns</b>
+	  <div style="display:hidden" id="col-pane"></div>
+	</td>
+      </tr>
+    </table>
+    
+  </body>
+</html>

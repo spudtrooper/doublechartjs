@@ -1,0 +1,15 @@
+<html>
+  <head>
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <!-- Included for the constants. -->
+    <script src="doublechart.js"></script>
+    <script type="text/javascript" src="iframe.js"></script>
+    <script>
+      google.load('visualization', '1', {packages: ['corechart', 'line']});
+      google.setOnLoadCallback(drawChart);
+    </script>
+  </head>
+  <body>
+    <div id="chart"></div>
+  </body>
+</html>
